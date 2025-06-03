@@ -1,0 +1,1090 @@
+@font-face {
+      font-family: "Helvetica Now Text Thin";
+      src: url(HelveticaNowText-Thin.woff2) format("woff2"),
+}
+
+@font-face {
+      font-family: "Helvetica Now Text Light";
+      src: url(HelveticaNowText-Light.woff2) format("woff2"),
+}
+
+@font-face {
+      font-family: "Helvetica Now Text Regular";
+      src: url(HelveticaNowText-Regular.woff2) format("woff2"),
+}
+
+@font-face {
+      font-family: "Helvetica Now Text Medium";
+      src: url(HelveticaNowText-Medium.woff2) format("woff2"),
+}
+
+@font-face {
+      font-family: "Helvetica Now Text Bold";
+      src: url(HelveticaNowText-Bold.woff2) format("woff2"),
+}
+
+@font-face {
+      font-family: "Helvetica Now Text Extra Bold";
+      src: url(HelveticaNowText-ExtraBold.woff2) format("woff2"),
+}
+
+@font-face {
+      font-family: "Helvetica Now Text Black";
+      src: url(helvetica-now-text-black.woff2) format("woff2"),
+}
+
+.material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 1em !important;
+      display: inline-block;
+      line-height: 1;
+      vertical-align: middle;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      direction: ltr;
+}
+
+body {
+      width: 100vw;
+      height: auto;
+      overflow-x: hidden;
+      margin: 0;
+}
+
+      .nav {
+            position: absolute;
+            top: 0;
+            width: 100vw;
+            height: 10vh;
+      }
+
+            .nav ul {
+                  display: flex;
+                  top: 0;
+                  box-sizing: border-box;
+                  width: 100vw;
+                  height: 10vh;
+                  padding-left: 10vw;
+                  padding-right: 10vw;
+                  padding-top: 2.5vh;
+                  padding-bottom: 2.5vh;
+                  margin-top: 0vh;
+                  margin-bottom: 0vh;
+                  align-items: center;
+                  justify-content: center;
+                  list-style-type: none;
+                  gap: 5vw;
+            }
+
+                  .nav li {
+                        display: flex;
+                        float: left;
+                        width: auto;
+                        height: 5vh;
+                        align-items: last baseline;
+                        justify-content: center;
+                        font-family: "Helvetica Now Text Bold";
+                        font-size: 1.25em;
+                        transition: transform 0.25s ease-in-out;
+                  }
+
+                        .nav li a {
+                              text-decoration: none;
+                              color: #6c1dc6;
+                              transition: color 0.25s ease-in-out
+                        }
+
+                        .nav li:hover {
+                              transform: scale(1.025);
+                        }
+
+                        .nav li a:hover {
+                              color: #9b04db;
+                        }
+
+                              img.logo {
+                                    height: 5vh;
+                                    width: auto;
+                              }
+
+      .header {
+            display: flex;
+            position: relative;
+            width: 100vw;
+            height: 80vh;
+            margin-top: 10vh;
+            -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 50%, black 50%, transparent 100%);
+            mask-image: linear-gradient(to bottom, transparent 0%, black 50%, black 50%, transparent 100%);
+            overflow: hidden;
+      }
+
+            .fade-in {
+                  position: absolute;
+                  pointer-events: none;
+                  opacity: 0;
+                  animation: fade 20s ease-in-out infinite;
+            }
+
+            .fade-in:nth-child(1) {
+                  animation-delay: 0s; 
+            }
+
+            .fade-in:nth-child(2) {
+                  animation-delay: 5s;
+            }
+
+            .fade-in:nth-child(3) {
+                  animation-delay: 10s;
+            }
+
+            .fade-in:nth-child(4) {
+                  animation-delay: 15s;
+            }
+
+                  .fade-in img {
+                        width: 100vw;
+                        height: auto;
+                        object-fit: cover;
+                        overflow: hidden;
+                  }
+
+                        .fade-in img.one {
+                              transform: translateY(-100vh);
+                              object-position: center;
+                        }
+
+                        .fade-in img.two {
+                              transform: translateY(-100vh);
+                              object-position: center;
+                        }
+
+                        .fade-in img.three {
+                              transform: translateY(-125vh);
+                              object-position: center;
+                        }
+
+                        .fade-in img.four {
+                              transform: translateY(0vh);
+                              object-position: center;
+                        }
+
+                  .fade-in a {
+                        position: absolute;
+                        display: inline-block;
+                        z-index: 10;
+                        width: auto;
+                        height: auto;
+                        text-decoration: none;
+                  }
+
+                  .fade-in h1 {
+                        position: relative;
+                        display: inline-block;
+                        z-index: 5;
+                        font-family: "Helvetica Now Text Extra Bold";
+                        font-size: 5em;
+                        color: black;
+                        background-image: none;
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: black;
+                        transition: color 1s ease-in-out, transform 1s ease-in-out;
+                  }
+
+                  .fade-in h1:hover {
+                        transform: scale(1.025);
+                        color: transparent;
+                        -webkit-text-fill-color: transparent; 
+                  }
+
+                  .fade-in h1::before {
+                        content: attr(data-text);
+                        position: absolute;
+                        display: inline-block;
+                        z-index: 2;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        font-size: inherit;
+                        font-family: inherit;
+                        background-image: linear-gradient(to right, #fbdd49, #fe8103, #ff1c6b, #e200a2, #9b04db, #6c1dc6);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        white-space: pre-line;
+                        opacity: 0;
+                        transition: opacity 0.5s ease-in-out;
+                        pointer-events: none;
+                  }
+
+                  .fade-in h1:hover::before {
+                        opacity: 1;
+                  }
+
+                        .fade-in h1.one {
+                              top: 20vh;
+                              left: 30vw;
+                        }
+
+                        .fade-in h1.two {
+                              top: 15vh;
+                              left: 25vw;
+                        }
+
+                        .fade-in h1.three {
+                              top: 10vh;
+                              left: 5vw;
+                        }
+
+                        .fade-in h1.four {
+                              top: 15vh;
+                              left: 5vw;
+                        }
+
+                  .fade-in h2 {
+                        position: relative;
+                        z-index: 5;
+                        font-family: "Helvetica Now Text Bold";
+                        font-size: 2.5em;
+                        color: black;
+                  }
+
+                        .fade-in h2.one {
+                              top: 10vh;
+                              left: 45vw;
+                        }
+
+                        .fade-in h2.two {
+                              top: 5vh;
+                              left: 50vw;
+                        }
+
+                        .fade-in h2.three {
+                              top: 2.5vh;
+                              left: 15vw;
+                        }
+
+                        .fade-in h2.four {
+                              top: 7vh;
+                              left: 5vw;
+                        }
+
+                  @keyframes fade {            
+                        0% {  
+                              opacity: 0;
+                              pointer-events: none;
+                        }
+                        
+                        20% {
+                              opacity: 1;
+                              pointer-events: auto;
+                        }
+                        
+                        40% {
+                              opacity: 0;
+                              pointer-events: none;
+                        }
+            
+                        60% {
+                              opacity: 0;
+                              pointer-events: none;
+                        }
+                        
+                        
+                        80% {
+                              opacity: 0;
+                              pointer-events: none;
+                        }
+
+                        100% {
+                              opacity: 0;
+                              pointer-events: none;
+                        }
+                  }
+
+
+      .solutions-intro-wrapper {
+            position: relative;
+            height: 90vh;
+      }
+  
+            .solutions-intro {
+                  height: 90vh;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+            }
+
+                  .solutions-text-align-center {
+                        position: sticky;
+                        top: 5vh;
+                        max-width: 60vw;
+                        text-align: center;
+                  }
+
+                        .solutions-text-align-center h2 {
+                              margin: 0;
+                              font-family: "Helvetica Now Text Extra Bold";
+                              font-size: 5em;
+                              color: black;
+                        }
+
+                        .solutions-text-align-center p {
+                              margin: 0;
+                              font-family: "Helvetica Now Text Bold";
+                              font-size: 1.5em;
+                              color: black;
+                        }
+
+
+            .solutions-section-tabs {
+                  background-color: white;
+                  color: white;
+                  border-radius: 1.5vw;
+                  padding: 7vh 3vw;
+            }
+
+                  .solutions-tabs-height {
+                        height: 550vh;
+                  }
+
+                        .solutions-tabs-sticky-wrapper {
+                              position: sticky;
+                              top: 5vh;
+                              height: 100vh;
+                              display: flex;
+                              justify-content: center;
+                              align-items: center;
+                        }
+
+                              .solutions-tabs-component {
+                                    display: grid;
+                                    max-width: 120vw;
+                                    width: 100%;
+                                    grid-template-columns: 0.4fr 1fr;
+                                    gap: 1.5vw;
+                              }
+
+                                    .solutions-tabs-left {
+                                          display: flex;
+                                          position: relative;
+                                          padding: 2vw;
+                                          background-color: white;
+                                          border-radius: 1.25vw;
+                                          flex-direction: column;
+                                          justify-content: center;
+                                    }
+
+                                    .solutions-tabs-left-content {
+                                          display: flex;
+                                          position: absolute;
+                                          width: 100%;
+                                          height: 50vh;
+                                          top: 0;
+                                          left: 0;
+                                          padding: 1vw;
+                                          flex-direction: column;
+                                          opacity: 0;
+                                          pointer-events: none; 
+                                          visibility: hidden;
+                                          transform: translateY(5vh);
+                                          transition: opacity 0.5s, transform 0.5s ease;
+                                    }
+
+                                          .solutions-tabs-left-content.active {
+                                                z-index: 1;
+                                                transform: translateY(0);
+                                                pointer-events: auto;
+                                                opacity: 1;
+                                                visibility: visible;
+                                          }
+
+                                          .solutions-tabs-left-content h3 {
+                                                width: auto;
+                                                height: auto;
+                                                margin: 0;
+                                                padding-right: 2.5vw;
+                                                font-family: "Helvetica Now Text Bold";
+                                                font-size: 2em;
+                                                color: black;
+                                          }
+
+                                          .solutions-tabs-text-wrapper {
+                                                flex: 1 1 auto;
+                                          }
+
+                                          .solutions-tabs-text {
+                                                width: auto;
+                                                height: auto;
+                                                padding-right: 2.5vw;
+                                                font-family: "Helvetica Now Text Regular";
+                                                font-size: 1em;
+                                                color: black;
+                                          }
+
+                                          .solutions-tabs-left-content.active a {
+                                                text-decoration: none;
+                                          }
+
+                                          .solutions-tabs-left-content.active .button {
+                                                display: flex;
+                                                position: relative;
+                                                top: 12.5vh;
+                                                z-index: 1;
+                                                width: 10vw;
+                                                height: 5vh;
+                                                justify-content: center;
+                                                align-items: center;
+                                                text-align: center;
+                                                background-color: black;
+                                                border-radius: 0.5vw 1vh;
+                                                gap: 0.5vw;
+                                                font-family: "Helvetica Now Text Regular";
+                                                font-size: 1em;
+                                                color: white;
+                                          }
+
+                                                .solutions-tabs-left-content.active .button span,
+                                                .solutions-tabs-left-content.active .button {
+                                                      position: relative;
+                                                      z-index: 1;
+                                                }
+
+                                                      .solutions-tabs-left-content.active .button::before {
+                                                            content: "";
+                                                            position: absolute;
+                                                            top: 0;
+                                                            left: 0;
+                                                            right: 0;
+                                                            bottom: 0;
+                                                            z-index: 0;
+                                                            justify-content: center;
+                                                            align-items: center;
+                                                            text-align: center;
+                                                            background: linear-gradient(to right, #fbdd49, #fe8103, #ff1c6b, #e200a2, #9b04db, #6c1dc6);
+                                                            border-radius: 0.5vw 1vh;
+                                                            gap: 0.5vw;
+                                                            font-family: "Helvetica Now Text Regular";
+                                                            font-size: 1em;
+                                                            color: white;
+                                                            opacity: 0;
+                                                            transition: opacity 0.5s ease;               
+                                                      }
+
+                                                            .solutions-tabs-left-content.active .button:hover::before {
+                                                                  z-index: -1;
+                                                                  opacity: 1;
+                                                            }
+
+                                          .solutions-tabs-right {
+                                                position: relative;
+                                                overflow: hidden;
+                                                border-radius: 1.25vw;
+                                          }
+
+                                          .solutions-tabs-video {
+                                                position: absolute;
+                                                width: 100%;
+                                                height: 50vh;
+                                                border-radius: 1.25vw;
+                                                object-fit: cover;
+                                                opacity: 0;
+                                                transform: translateY(100%);
+                                                transition: opacity 0.5s, transform 0.5s;
+                                          }
+
+                                                .solutions-tabs-video.active {
+                                                      position: relative;
+                                                      opacity: 1;
+                                                      transform: translateY(0);
+                                                }
+
+                                                .solutions-tabs-video video {
+                                                      display: block;
+                                                      width: 100%;
+                                                      height: 100%;
+                                                      object-fit: cover;
+                                                      border-radius: 1.25vw;
+                                                }
+
+      .testimonials {
+            display: flex;
+            position: relative;
+            width: 80vw;
+            height: 140vh;
+            margin-top: 10vh;
+            margin-left: 10vw;
+            margin-right: 10vw;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+      }
+
+            .testimonials-header {
+                  display: flex;
+                  width: 80vw;
+                  height: 20vh;
+                  flex-direction: column;
+                  align-items: center;
+            }
+
+                  .testimonials h1 {
+                        position: relative;
+                        margin: 0;
+                        justify-content: center;
+                        align-items: center;
+                        font-family: "Helvetica Now Text Extra Bold";
+                        font-size: 5em;
+                  }
+
+                  .testimonials h2 {
+                        position: relative;
+                        margin: 0;
+                        justify-content: center;
+                        align-items: center;
+                        font-family: "Helvetica Now Text Bold";
+                        font-size: 1.5em;  
+                  }
+
+            .testimonials-container {
+                  display: flex;
+                  position: relative;
+                  width: 20vw;
+                  height: 30vh;
+                  margin-top: 10vh;
+                  flex-flow: column wrap;
+                  justify-content: center;
+                  align-items: center;
+            }
+
+                  .testimonials-container h1 {
+                        display: flex;
+                        position: relative;
+                        margin: 0;
+                        justify-content: center;
+                        align-items: center;
+                        font-family: "Helvetica Now Text Bold";
+                        font-size: 5em;
+                  }
+
+                        .testimonials-container h1.gold {
+                              color: #cfa429;
+                        }
+
+                        .testimonials-container h1.blue {
+                              color: #0cabbe;
+                        }
+
+                        .testimonials-container h1.darkblue {
+                              color: #182454;
+                        }
+
+                        .testimonials-container h1.orange {
+                              color: #ef4729;
+                        }
+
+                        .testimonials-container h1.green {
+                              color: #00b77b;
+                        }
+
+                        .testimonials-container h1.darkgreen {
+                              color: #08543c;
+                        }
+
+                        .testimonials-container h1.lightgreen {
+                              color: #30e1a2;
+                        }
+
+                        .testimonials-container h1.googleblue {
+                              color: #4086f4;
+                        }
+
+                        .testimonials-container span:nth-child(1) {
+                              margin-right: 0.25em;
+                              color: #4086f4;}
+                        
+                        .testimonials-container span:nth-child(2) {
+                              color: #eb4132;
+                        }
+                        
+                        .testimonials-container span:nth-child(3) {
+                              color: #fbbd01;
+                        }
+                        
+                        .testimonials-container span:nth-child(4) {
+                              color: #31aa52;
+                        }
+                        
+                        .testimonials-container span:nth-child(5) {
+                              color: #eb4132;
+                        }
+                        
+                        .testimonials-container span:nth-child(6) {
+                              color: #4086f4;
+                        }
+
+
+                  .testimonials-container p {
+                        display: flex;
+                        position: relative;
+                        margin: 0;
+                        justify-content: center;
+                        align-items: center;
+                        font-family: "Helvetica Now Text Light";
+                        font-size: 1em;
+                  }
+
+                        .testimonials-container p.gold {
+                              color: #cfa429;
+                        }
+
+                        .testimonials-container p.blue {
+                              color: #0cabbe;
+                        }
+
+                        .testimonials-container p.darkblue {
+                              color: #182454;
+                        }
+
+                        .testimonials-container p.orange {
+                              color: #ef4729;
+                        }
+
+                        .testimonials-container p.darkgreen {
+                              color: #08543c;
+                        }
+
+                  .testimonials-container img {
+                        width: auto;
+                        max-width: 10vw;
+                        height: 4vh;
+                        margin-top: 2.5vh;
+                  }
+
+      .partner-header {
+                  display: flex;
+                  width: 80vw;
+                  height: 50vh;
+                  margin-left: 10vw;
+                  margin-right: 10vh;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+            }
+
+                  .partner-header h1 {
+                        position: relative;
+                        margin: 0;
+                        justify-content: center;
+                        align-items: center;
+                        font-family: "Helvetica Now Text Extra Bold";
+                        font-size: 5em;
+                  }
+
+                  .partner-header h2 {
+                        position: relative;
+                        margin: 0;
+                        justify-content: center;
+                        align-items: center;
+                        font-family: "Helvetica Now Text Regular";
+                        font-size: 1.5em;  
+                  }
+
+      .animation-scroll-space {
+            position: relative;
+            height: 150vh;
+      }
+
+      .clip-wrapper {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            clip-path: inset(0 0 0 0);
+      }
+
+      .animation-fixed-content {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            overflow: clip;
+            transition: opacity 0.3s ease;
+      }
+
+            .animation-fixed-content.active {
+                  opacity: 1;
+            }
+
+            .animation-fixed-content.finished {
+                  position: relative;
+                  top: -100vh;
+                  left: 0;
+                  width: 100vw;
+                  height: 100vh;
+                  opacity: 1;
+                  pointer-events: none;
+            }
+
+
+                  .main-image {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 40vw;
+                        height: auto;
+                        transform: translate(-50%, -50%) scale(1);
+                        transition: transform 0.1s ease-out;
+                        z-index: 10;
+                  }
+
+                  .burst-image {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 7.5vw;
+                        height: auto;
+                        opacity: 0;
+                        transform: translate(-50%, -50%) scale(0.2);
+                        transition: transform 0.3s ease, opacity 0.3s ease;
+                        z-index: 5;
+                  }
+
+      .offers-header {
+            display: flex;
+            width: 80vw;
+            height: 50vh;
+            margin-left: 10vw;
+            margin-right: 10vh;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+      }
+
+            .offers-header h1 {
+                  position: relative;
+                  margin: 0;
+                  justify-content: center;
+                  align-items: center;
+                  font-family: "Helvetica Now Text Extra Bold";
+                  font-size: 5em;
+            }
+
+            .offers-header h2 {
+                  position: relative;
+                  margin: 0;
+                  justify-content: center;
+                  align-items: center;
+                  font-family: "Helvetica Now Text Regular";
+                  font-size: 1.5em;  
+            }
+
+      .cruise-pricing,
+      .flights-pricing {
+                  display: flex;
+                  position: relative;
+                  width: 80vw;
+                  height: 20vh;
+                  margin-left: 10vw;
+                  margin-right: 10vw;
+                  justify-content: center;
+                  align-items: center;
+                  font-family: "Helvetica Now Text Bold";
+                  font-size: 3em;
+            }
+
+      .offers {
+            display: flex;
+            position: relative;
+            width: 80vw;
+            height: 150vh;
+            margin-left: 10vw;
+            margin-right: 10vw;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+      }
+
+            .offer-packages {
+                  display: flex;
+                  position: relative;
+                  width: 15vw;
+                  height: 50vh;
+                  margin-left: 5vw;
+                  margin-right: 5vw;
+                  flex-flow: column;
+                  justify-content: start;
+                  text-align: left;
+            }
+
+                  .offer-packages h1 {
+                        display: flex;
+                        position: relative;
+                        margin: 0;
+                        font-family: "Helvetica Now Text Bold";
+                        font-size: 3em;
+                  }
+
+                  .offer-packages p.package {
+                        display: flex;
+                        position: relative;
+                        margin: 0;
+                        font-family: "Helvetica Now Text Regular";
+                        font-size: 1.5em;
+                  }
+                  
+                  .offer-packages p.starts {
+                        display: flex;
+                        position: relative;
+                        margin: 0;
+                        font-family: "Helvetica Now Text Regular";
+                        font-size: 1em;
+                  }
+
+                  .offer-packages p.perperson {
+                        display: flex;
+                        position: relative;
+                        top: -5vh;
+                        margin: 0;
+                        justify-content: end;
+                        text-align: right;
+                        font-family: "Helvetica Now Text Light";
+                        font-size: 1em;
+                  }
+
+                  .offer-packages ul {
+                        display: block;
+                        width: 15vw;
+                        height: 30vh;
+                        padding: 0;
+                        list-style-type: none;
+                        font-family: "Helvetica Now Text Light";
+                        font-size: 1em;
+                  }
+
+                        .offer-packages ul li {
+                              display: flex;
+                              width: 15vw;
+                              justify-content: start;
+                              align-items: center;
+                              gap: 1em;
+                              margin-bottom: 2.5vh;
+                        }
+
+                  .offer-packages a {
+                        text-decoration: none;
+                  }
+
+                  .offer-packages .button {
+                        display: flex;
+                        position: relative;
+                        z-index: 1;
+                        width: 10vw;
+                        height: 5vh;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        background-color: black;
+                        border-radius: 0.5vw 1vh;
+                        gap: 0.5vw;
+                        font-family: "Helvetica Now Text Regular";
+                        font-size: 1em;
+                        color: white;
+                  }
+
+                  .offer-packages .button span,
+                  .offer-packages .button {
+                        position: relative;
+                        z-index: 1;
+                  }
+
+                        .offer-packages .button::before {
+                              content: "";
+                              position: absolute;
+                              top: 0;
+                              left: 0;
+                              right: 0;
+                              bottom: 0;
+                              z-index: 0;
+                              justify-content: center;
+                              align-items: center;
+                              text-align: center;
+                              background: linear-gradient(to right, #fbdd49, #fe8103, #ff1c6b, #e200a2, #9b04db, #6c1dc6);
+                              border-radius: 0.5vw 1vh;
+                              gap: 0.5vw;
+                              font-family: "Helvetica Now Text Regular";
+                              font-size: 1em;
+                              color: white;
+                              opacity: 0;
+                              transition: opacity 0.5s ease;               
+                        }
+
+                              .offer-packages .button:hover::before {
+                                    opacity: 1;
+                                    z-index: -1;
+                              }
+
+            .accordion {
+                  display: block;
+                  width: 80vw;
+                  height: auto;
+                  justify-content: center;
+                  align-items: center;
+                  text-align: center;
+                  border: none;
+                  cursor: pointer;
+            }
+
+                  .accordion p {
+                        font-family: "Helvetica Now Text Medium";
+                        font-size: 1em;
+                        color: black;
+                  }
+
+                        .accordion span.material-symbols-outlined {
+                              transition: transform 0.3s ease;
+                        }
+
+                        .accordion.active span.material-symbols-outlined {
+                              transform: rotate(180deg);
+                        }
+
+
+                  .panel {
+                        width: 80vw;
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: max-height 0.3s ease-out;
+                  }
+                  
+                        .comparison-container {
+                              width: 80vw;
+                              height: auto;
+                              margin: 10vh auto;
+                        }
+
+                              .comparison-container h1 {
+                                    font-family: "Helvetica Now Text Bold";
+                                    font-size: 3em;
+                                    margin-bottom: 2vh;
+                                    text-align: left;
+                              }
+
+                              .comparison-grid {
+                                    display: grid;
+                                    grid-template-columns: repeat(4, 1fr);
+                              }
+
+                                    .plan-header {
+                                          margin: 1vh 0;
+                                          text-align: center;
+                                          color: black;
+                                          font-family: "Helvetica Now Text Bold";
+                                          font-size: 1.5em;
+                                    }
+
+                                    .feature-category {
+                                          padding: 2vh 1vw;
+                                          margin: 1vh 0;
+                                          text-align: left;
+                                          background-color: #F1F3F4;
+                                    }
+
+                                          .feature-category h1 {
+                                                font-family: "Helvetica Now Text Medium";
+                                                font-size: 1.5em
+                                          }
+
+                                    .feature-item {
+                                          padding: 2vh 1vw;
+                                          text-align: left;
+                                          font-family: "Helvetica Now Text Regular";
+                                          font-size: 1em
+                                    }
+
+                                    .feature-description {
+                                          margin: 1vh 0;
+                                          text-align: left;
+                                          font-family: "Helvetica Now Text Light";
+                                          font-size: 0.75em;
+                                    }
+
+                                    .grid-item {
+                                          justify-self: center;
+                                          align-content: center;
+                                          text-align: center;
+                                          font-family: "Helvetica Now Text Light";
+                                          font-size: 0.75em;
+                                    }
+
+      .checkout {
+            display: flex;
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            margin-top: 10vh;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+      }
+
+            .checkout h1 {
+                  position: relative;
+                  margin: 0;
+                  justify-content: center;
+                  align-items: center;
+                  font-family: "Helvetica Now Text Extra Bold";
+                  font-size: 5em;
+                  color: black;
+            }
+
+            .checkout h2 {
+                  position: relative;
+                  margin: 0;
+                  justify-content: center;
+                  align-items: center;
+                  font-family: "Helvetica Now Text Bold";
+                  font-size: 3em;
+                  color: #9AA0A6;
+            }
+
+            .checkout img {
+                  width: auto;
+                  height: 50vh;
+            }
+
+      .footer {
+            display: flex;
+            position: relative;
+            width: 80vw;
+            height: 10vh;
+            margin: 10vh 10vw;
+            margin-top: 1250vh;
+            justify-content: center;
+            align-items: center;
+      }
+
+            .footer p {
+                  font-family: "Helvetica Now Text Light";
+                  font-size: 0.75em;
+                  color: black;
+            }
+            
+      .slide {
+            opacity: 0;
+            transform: translateY(5vh);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+      }
+
+            .slide.reveal {
+                  opacity: 1;
+                  transform: translateY(0);
+            }
